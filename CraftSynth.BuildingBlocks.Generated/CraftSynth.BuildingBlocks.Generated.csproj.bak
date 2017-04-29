@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CraftSynth.BuildingBlocks.Generated</RootNamespace>
+    <AssemblyName>CraftSynth.BuildingBlocks.Generated</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CraftSynth_Debug_With_Full_Building_Blocks|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.WindowsAzure.StorageClient, Version=1.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZetaLongPaths">
+      <HintPath>..\CraftSynth.BuildingBlocks.ExternalLibraries\ZetaLongPaths.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>IF NOT "$(ConfigurationName)" == "CraftSynth_Debug_With_Full_Building_Blocks" $(ProjectDir)Regenerator.BuildMinimalVersion.exe
+IF "$(ConfigurationName)" == "CraftSynth_Debug_With_Full_Building_Blocks" $(ProjectDir)Regenerator.LinkFullVersion.exe
+</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+    <Content Include="Regenerator.BuildMinimalVersion.exe" />
+    <Content Include="Regenerator.BuildMinimalVersion.pdb" />
+    <Content Include="Regenerator.LinkFullVersion.exe" />
+    <Content Include="Regenerator.LinkFullVersion.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Regenerator.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Common.DateAndTime.cs">
+      <Link>CraftSynth.BuildingBlocks.Common.DateAndTime.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Common.Mime.cs">
+      <Link>CraftSynth.BuildingBlocks.Common.Mime.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Common.Misc.cs">
+      <Link>CraftSynth.BuildingBlocks.Common.Misc.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Common.Types.cs">
+      <Link>CraftSynth.BuildingBlocks.Common.Types.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Encryption.cs">
+      <Link>CraftSynth.BuildingBlocks.Encryption.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.AzureStorage.HandlerForBlobs.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.AzureStorage.HandlerForBlobs.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Clipboard.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Clipboard.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Registry.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Registry.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Xml.CustomXmlAttributes.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Xml.CustomXmlAttributes.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Xml.CustomXmlDeserializer.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Xml.CustomXmlDeserializer.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Xml.CustomXmlSerializer.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Xml.CustomXmlSerializer.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Xml.CustomXmlSerializerBase.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Xml.CustomXmlSerializerBase.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Xml.Misc.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Xml.Misc.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.WindowsEventLog.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.WindowsEventLog.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Common.ExtenderClass.cs">
+      <Link>CraftSynth.BuildingBlocks.Common.ExtenderClass.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.Console.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.Console.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.Web.Misc.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.Web.Misc.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.Web.Navigation.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.Web.Navigation.cs</Link>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.Web.UriHandler.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.Web.UriHandler.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsForms.FormDisplayer.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsForms.FormDisplayer.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsForms.FormDriver.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsForms.FormDriver.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsForms.Slider.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsForms.Slider.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsService.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsService.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.WindowsNT.Misc.cs">
+      <Link>CraftSynth.BuildingBlocks.WindowsNT.Misc.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.WindowsNT.WindowsMessage.cs">
+      <Link>CraftSynth.BuildingBlocks.WindowsNT.WindowsMessage.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.WindowsNT.UserActivityHook.cs">
+      <Link>CraftSynth.BuildingBlocks.WindowsNT.UserActivityHook.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsForms.KeyCombinationRetriever.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsForms.KeyCombinationRetriever.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsForms.KeyCombinationRetriever.Designer.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsForms.KeyCombinationRetriever.Designer.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.WindowsNT.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.WindowsNT.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.FileSystem.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.FileSystem.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.FtpClient.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.FtpClient.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Ftp.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Ftp.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Http.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Http.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Streams.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Streams.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Logging.Misc.cs">
+      <Link>CraftSynth.BuildingBlocks.Logging.Misc.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Logging.CustomTraceLog.cs">
+      <Link>CraftSynth.BuildingBlocks.Logging.CustomTraceLog.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.Validation.cs">
+      <Link>CraftSynth.BuildingBlocks.Validation.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.WindowsNT.NativeMethods.cs">
+      <Link>CraftSynth.BuildingBlocks.WindowsNT.NativeMethods.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.WindowsNT.WindowsMessageCopyData.cs">
+      <Link>CraftSynth.BuildingBlocks.WindowsNT.WindowsMessageCopyData.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsForms.Misc.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsForms.Misc.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.WindowsForms.KeysHelper.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.WindowsForms.KeysHelper.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Sql.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Sql.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.EMail.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.EMail.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.AzureStorage.BlobUrl.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.AzureStorage.BlobUrl.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.EncodingDetector.cs">
+      <Link>CraftSynth.BuildingBlocks.EncodingDetector.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Db.DbConnectionInfo.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Db.DbConnectionInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.FtpPath.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.FtpPath.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.IO.Excel.cs">
+      <Link>CraftSynth.BuildingBlocks.IO.Excel.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.Graphics.CompressibleImage.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.Graphics.CompressibleImage.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.Graphics.Misc.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.Graphics.Misc.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Projects\CraftSynth.BuildingBlocks\SourceCode\CraftSynth.BuildingBlocks\CraftSynth.BuildingBlocks.UI.Graphics.RichTextBoxImageExporter.cs">
+      <Link>CraftSynth.BuildingBlocks.UI.Graphics.RichTextBoxImageExporter.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

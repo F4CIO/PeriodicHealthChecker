@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F4CIOsDNSUpdaterManager", "F4CIOsDNSUpdaterManager\F4CIOsDNSUpdaterManager.csproj", "{108D3D34-E8FA-415B-836C-726569982A8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F4CIOsDNSUpdaterService", "F4CIOsDNSUpdaterService\F4CIOsDNSUpdaterService.csproj", "{CBF1427F-1788-4692-A881-867762AB1376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F4CIOsDNSUpdaterCommon", "F4CIOsDNSUpdaterCommon\F4CIOsDNSUpdaterCommon.csproj", "{CF53732F-1832-496B-8B6F-AA27AC7FADB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CraftSynth.BuildingBlocks.Generated", "CraftSynth.BuildingBlocks.Generated\CraftSynth.BuildingBlocks.Generated.csproj", "{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CraftSynth_Debug_With_Full_Building_Blocks|Any CPU = CraftSynth_Debug_With_Full_Building_Blocks|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{108D3D34-E8FA-415B-836C-726569982A8A}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.ActiveCfg = Debug|Any CPU
+		{108D3D34-E8FA-415B-836C-726569982A8A}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.Build.0 = Debug|Any CPU
+		{108D3D34-E8FA-415B-836C-726569982A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108D3D34-E8FA-415B-836C-726569982A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108D3D34-E8FA-415B-836C-726569982A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108D3D34-E8FA-415B-836C-726569982A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF1427F-1788-4692-A881-867762AB1376}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF1427F-1788-4692-A881-867762AB1376}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.Build.0 = Debug|Any CPU
+		{CBF1427F-1788-4692-A881-867762AB1376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF1427F-1788-4692-A881-867762AB1376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF1427F-1788-4692-A881-867762AB1376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF1427F-1788-4692-A881-867762AB1376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF53732F-1832-496B-8B6F-AA27AC7FADB0}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF53732F-1832-496B-8B6F-AA27AC7FADB0}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.Build.0 = Debug|Any CPU
+		{CF53732F-1832-496B-8B6F-AA27AC7FADB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF53732F-1832-496B-8B6F-AA27AC7FADB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF53732F-1832-496B-8B6F-AA27AC7FADB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF53732F-1832-496B-8B6F-AA27AC7FADB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.ActiveCfg = CraftSynth_Debug_With_Full_Building_Blocks|Any CPU
+		{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}.CraftSynth_Debug_With_Full_Building_Blocks|Any CPU.Build.0 = CraftSynth_Debug_With_Full_Building_Blocks|Any CPU
+		{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

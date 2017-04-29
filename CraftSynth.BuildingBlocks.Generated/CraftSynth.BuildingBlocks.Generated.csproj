@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5ED9146-E478-4204-B5AA-AF9BFA8EF153}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CraftSynth.BuildingBlocks.Generated</RootNamespace>
+    <AssemblyName>CraftSynth.BuildingBlocks.Generated</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CraftSynth_Debug_With_Full_Building_Blocks|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZetaLongPaths">
+      <HintPath>..\CraftSynth.BuildingBlocks.ExternalLibraries\ZetaLongPaths.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "c:\windows\LinkToCurrentlyBuiltSolution" rd "c:\windows\LinkToCurrentlyBuiltSolution"
+mklink /j "c:\windows\LinkToCurrentlyBuiltSolution" "$(SolutionDir)"
+IF NOT "$(ConfigurationName)" == "CraftSynth_Debug_With_Full_Building_Blocks" $(ProjectDir)Regenerator.BuildMinimalVersion.exe
+IF "$(ConfigurationName)" == "CraftSynth_Debug_With_Full_Building_Blocks" $(ProjectDir)Regenerator.LinkFullVersion.exe
+</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+    <Content Include="Regenerator.BuildMinimalVersion.exe" />
+    <Content Include="Regenerator.BuildMinimalVersion.pdb" />
+    <Content Include="Regenerator.LinkFullVersion.exe" />
+    <Content Include="Regenerator.LinkFullVersion.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Regenerator.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CraftSynth.BuildingBlocks.Common.ExtenderClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CraftSynth.BuildingBlocks.Common.Misc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CraftSynth.BuildingBlocks.UI.WindowsForms.Misc.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CraftSynth.BuildingBlocks.UI.Console.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CraftSynth.BuildingBlocks.IO.FileSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CraftSynth.BuildingBlocks.Logging.CustomTraceLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CraftSynth.BuildingBlocks.IO.EMail.cs" />
+  </ItemGroup>
+</Project>
